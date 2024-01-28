@@ -39,4 +39,27 @@ public class startHW1 implements Runnable{
         int res = Integer.parseInt(resNum);
         System.out.println("Result: " +res);
     }
+    private void exercise4()
+    {
+        System.out.println("Write a six-digit number: ");
+        int num = scanner.nextInt();
+        if(String.valueOf(num).length() != 6)
+        {
+            System.out.println("Error");
+
+        }
+        else {
+            String s = String.valueOf(num);
+            char[] s2 =s.toCharArray();
+            char temp = s2[0];
+            s2[0] = s2[s.length()-1];
+            s2[s.length()-1] = temp;
+            temp= s2[1];
+            s2[1]= s2[s.length()-2];
+            s2[s.length()-2] = temp;
+            int res = Integer.parseInt(s2.toString());
+            System.out.println("Result: " + res);
+
+        }
+    }
 }
